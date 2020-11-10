@@ -4,6 +4,7 @@ import (
 	"net/http"
 )
 
+// Register routes on mux
 func Register() *http.ServeMux {
 	mux := http.NewServeMux()
 
