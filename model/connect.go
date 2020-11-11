@@ -14,7 +14,7 @@ func Connect() *sql.DB {
 		host     = "localhost"
 		port     = 5432
 		user     = "postgres"
-		password = ""
+		password = "''"
 		dbname   = "teste"
 	)
 
@@ -23,11 +23,12 @@ func Connect() *sql.DB {
 		host, port, user, password, dbname,
 	)
 
+	fmt.Println(psqlInfo)
+
 	db, err := sql.Open("postgres", psqlInfo)
 	if err != nil {
 		panic(err)
 	}
-	defer db.Close()
 
 	err = db.Ping()
 	if err != nil {

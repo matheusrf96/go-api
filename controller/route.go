@@ -10,6 +10,7 @@ func Register() *http.ServeMux {
 
 	mux.HandleFunc("/", hello())
 	mux.HandleFunc("/ping", ping())
+	mux.HandleFunc("/create", create())
 
 	return mux
 }
