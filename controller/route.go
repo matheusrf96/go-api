@@ -11,7 +11,8 @@ func Register() *http.ServeMux {
 	mux.HandleFunc("/", hello())
 	mux.HandleFunc("/ping", ping())
 	mux.HandleFunc("/create", create())
-	mux.HandleFunc("/reads", reads())
+	mux.HandleFunc("/reads", readAll())
+	mux.HandleFunc("/read-by-name", readByName())
 
 	return mux
 }
